@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>AFEWS</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header id="header">
+      <div class="logo">
+        <img id="header-img" src="https://d112y698adiu2z.cloudfront.net/photos/production/user_photos/001/780/757/datas/profile.png">
+        <h1><a href="#">Dimcord</a></h1>
+      </div>
+      <nav id="nav-bar">
+        <a class="nav-link" href="#features">Features</a>
+        <a class="nav-link" href="#demo">Demo</a>
+        <a class="nav-link" href="#github">Github</a>
+      </nav>
+    </header>
+
+    <main>
+	  <a class="up" href="#">^</a>
+
+      <div id="what-is-afews">
+		<div>
+		  <h2>What is AFEWS?</h2>
+          <p>Automatic Flood Early Warning System (AFEWS) is a prototype flood detection device created to simplify Flood Early Warning System for anyone to use. This device works with an alarm system integrated to a Telegram bot. The device can also work for monitoring water surface level in rivers and lakes. It can detect up to 20 centimeters of deviation in water level with 75 percent accuracy and 5 seconds response time to critical situations.</p>
+		</div>
+        <img id="hero-img" src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/710/015/datas/gallery.jpg">
+      </div>
+
+      <div id="features">
+		<h1 class="features-title">Features</h1>
+        <h2 class="features-title">Open source</h2>
+        <p class="features-subtitle">You can freely create your own AFEWS and modify it as you want</p>
+        <h2 class="features-title">Easy to create</h2>
+        <p class="features-subtitle">Little to no coding experience is needed to make your own AFEWS</p>
+        <h2 class="features-title">Affordable and modular</h2>
+        <p class="features-subtitle">The components for AFEWS are easily found everywhere</p>
+      </div>
+
+      <div id="demo">
+        <h2>Here's a demonstration of how the device works</h2>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/Qn1J-UZrAlU?si=Sk_t7cBlelOHDzCK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Over the course of hundreds years, floods have been worsening since its first strike in Indonesia. Mainly because the ground’s ability to contain water is reduced to an irreversible level. Although several methods had been applied in order to restore the absorbability back to normal, countless urban areas which include large buildings are currently unreachable to reforestations. And therefore, rerouting of excess water is crucial in order to prevent floods from happening.
+
+We must prevent this devastating disaster from happening in the future by creating ways for society to adapt to geological situations around the country. However, there are no significant results from these somewhat traditional methods.</p>
+        <p>This water level detector will work in 3-steps, automatically sending and after receiving the reflected waves, the tool will immediately send the sound to the mainboard and warn local residents via a module installed onboard and opens up a valve for the upper water bank to route excess water into the lower bank. The automation is made possible with the help of our ever lovely Telegram bot, Doodadeed. Fear not, we use big capacity batteries that can last up to a year, and the requirement of manual checking is none.</p>
+        <p>We programmed a NodeMCU ESP-12E as the mainboard connected to an ultrasonic sensor. We also hooked up a few necessary components such as a voltage regulator, a servo, and some resistors. The design is simple enough for anyone to learn. And the components aren't so pricey either. Because we wanted AFEWS-E to be easily build by anyone across the globe!</p>
+      </div>
+
+      <div id="github">
+        <h2>Check out the full code here:</h2>
+        <a href="https://github.com/dimcoord/afews">AFEWS Github Repo</a>
+      </div>
+    </main>
+  </body>
+
+  <footer>
+      <h2>dimcord @ <a href="https://dimcord.my.id/">dimcord.my.id</a></h2>
+    </footer>
+
+</html>
