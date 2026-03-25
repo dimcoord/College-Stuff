@@ -102,6 +102,37 @@ body {
   padding-inline: 1.25rem;
 }
 
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+#submit-btn {
+  text-align: center;
+  background-color: #3b3b5f;
+  border: 1px solid #3b3b9f;
+  box-shadow: 5px 5px 5px black;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+#submit-btn:hover {
+  cursor: pointer;
+  color: #3b3b4f;
+  background-color: linen;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 1s;
+}
+
+#name, #email {
+  background-color: #3b3b5f;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
 #hero-btn:hover {
   cursor: pointer;
   color: #3b3b4f;
@@ -120,14 +151,11 @@ body {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.modal-show {
-  display: block;
-}
-
 .modal-box {
   position: relative;
   top: 50%;
   left: 50%;
+  width: 50%;
   transform: translate(-50%, -50%);
   background: #3b3b5f;
   padding: 2rem;
