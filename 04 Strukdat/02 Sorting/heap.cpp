@@ -2,20 +2,35 @@
 #include <chrono>
 using namespace std;
 
-void selectionSort(vector<int>& arr) {
+void heapify(vector<int>& arr, int n, int i) {
+	int largest = i;
+	int left = 2 * i + 1;
+	int right = 2 * i + 2;
+
+	if (left < n && arr[left] > arr[largest]) {
+		largest = left;
+	}
+
+	if (right < n && arr[right] > arr[largest]) {
+		largest = right;
+	}
+
+	if (largest != i) {
+		swap(arr[i], arr[largest]);
+		heapify(arr, n, largest);
+	}
+}
+
+void heapSort(vector<int>& arr) {
 	int n = arr.size();
 
-	int last_index = n-1;
-	for(int i=0; i<=last_index; i++){
-		int minimum = i;
-		for(int j=i+1; j<=last_index; j++){
-			if(arr[j] < arr[minimum]){
-				minimum = j;
-			}
-		}
-		int swap = arr[i];
-		arr[i] = arr[minimum];
-		arr[minimum] = swap;
+	for (int i = n / 2 - 1; i >= 0; i--) {
+		heapify(arr, n, i);
+	}
+
+	for (int i = n - 1; i > 0; i--) {
+		swap(arr[0], arr[i]);
+		heapify(arr, i, 0);
 	}
 }
 
@@ -27,7 +42,7 @@ double benchmark250() {
 	shuffle(arr.begin(), arr.end(), gen);
 
 	auto start = chrono::high_resolution_clock::now();
-	selectionSort(arr);
+	heapSort(arr);
 	auto end = chrono::high_resolution_clock::now();
 
 	chrono::duration<double> duration = end - start;
@@ -42,7 +57,7 @@ double benchmark500() {
 	shuffle(arr.begin(), arr.end(), gen);
 
 	auto start = chrono::high_resolution_clock::now();
-	selectionSort(arr);
+	heapSort(arr);
 	auto end = chrono::high_resolution_clock::now();
 
 	chrono::duration<double> duration = end - start;
@@ -57,7 +72,7 @@ double benchmark750() {
 	shuffle(arr.begin(), arr.end(), gen);
 
 	auto start = chrono::high_resolution_clock::now();
-	selectionSort(arr);
+	heapSort(arr);
 	auto end = chrono::high_resolution_clock::now();
 
 	chrono::duration<double> duration = end - start;
@@ -72,7 +87,7 @@ double benchmark1000() {
 	shuffle(arr.begin(), arr.end(), gen);
 
 	auto start = chrono::high_resolution_clock::now();
-	selectionSort(arr);
+	heapSort(arr);
 	auto end = chrono::high_resolution_clock::now();
 
 	chrono::duration<double> duration = end - start;
